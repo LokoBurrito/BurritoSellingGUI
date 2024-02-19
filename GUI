@@ -1,0 +1,12 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+getgenv().Theme = "DarkTheme"
+local Window = Library.CreateLib("Burrito's DHC Selling Essentials", getgenv().Theme)
+local Tab = Window:NewTab("SELLING GUIS")
+local Section = Tab:NewSection("Crostide GUI's")
+Section:NewButton("Crostide Seller GUI", "Track all players DHC", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Crostide/cdhc/main/gui"))()
+end)
+Section:NewButton("Crostide DHC Counter", "Counts the DHC on ground", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Crostide/Counter/main/Cash"))()
+end)
+
