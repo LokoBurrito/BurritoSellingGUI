@@ -34,6 +34,7 @@ local Tab = Window:NewTab("Credits")
 local c = Tab:NewSection("Credits:")
 c:NewLabel("Made By: LokoBurrito")
 c:NewLabel("UI made by: xHeptc")
+c:NewLabel("Farm Scripts made by: EpicPug")
 -------------------------------------------------------------------------------------------------------------------------
 local Tab= Window:NewTab("Settings")
 local d = Tab:NewSection("Settings")
