@@ -1,36 +1,36 @@
--- STILL BEING WORKED ON!
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-getgenv().Theme = "Synapse"
-local Window = Library.CreateLib("Burrito's Farming GUI", getgenv().Theme)
+local Window = Library.CreateLib("Burrito's Farming GUI", "DarkTheme")
+local Tab = Window:NewTab("Farms")
+local Section = Tab:NewSection("Autofarms")
+Section:NewButton("Autofarm (FISTS)", "Run after finishing Boxing Farm", function()
+ _G.ToolMode = '1' -- '1' for Combat | '2' for Knife
+ _G.FpsCap = 25 -- fpscap For your Account
+ _G.LowGfx = true -- true for LowGfx on | false for LowGfx off
+ _G.ToggleKey = 'k' -- Toggle Key to hide Gui
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/EpicPug/dahood/main/AutoFarm.lua',true))()
+end)
+Section:NewButton("Autofarm (KNIFE)", "Purchase a Knife before running", function()
+ _G.ToolMode = '2' -- '1' for Combat | '2' for Knife
+ _G.FpsCap = 25 -- fpscap For your Account
+ _G.LowGfx = true -- true for LowGfx on | false for LowGfx off
+ _G.ToggleKey = 'k' -- Toggle Key to hide Gui
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/EpicPug/dahood/main/AutoFarm.lua',true))()
+end)
+-------------------------------------------------------------------------------------------------------------------------
 local Tab = Window:NewTab("Boxing Farm")
-local Section = Tab:NewSection("Boxing Script")
-Section:NewButton("Boxing Farm", "Best used before farming", function()
-   loadstring(game:HttpGet("-- BOXING SCRIPT HERE --"))()
-   print("Executed!")
+local a = Tab:NewSection("Boxing Farm")
+a:NewButton("BOXING FARM", "use before doing fist farm", function()
+ _G.FpsCap = 20
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/EpicPug/dahood/main/BoxFarm.lua'))()
 end)
-local Section = Tab:NewSection("Farming")
-Section:NewButton("Autofarm (FISTS)", "Best used after Box Farm.", function())
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/EpicPug/dahood/main/AutoFarm.lua")
-   print("Executed!")
-end)
-Section:NewButton("Autofarm (KNIFE)", "Buy a Knife before running.", function())
-   loadstring(game:HttpGet("-- KNIFE AUTOFARM SCRIPT HERE -- ")
-   print("Executed!")
-end)
-local Tab = Window:NewTab("Credits")
-Section:NewLabel("Made By: LokoBurrito on roblox")
-Section:NewLabel("(or lokoburrito. on discord)")
-Section:NewLabel("UI Made by: xHeptc")
-local Section = Tab:NewSection("Settings")
-Section:NewKeybind("GUI Keybind", "Keybind to turn the GUI on and off", Enum.KeyCode.F, function()
-   Library:ToggleUI()
-   print("Binded!")
-end)
-Section:NewColorPicker("Color Picker", "you might be able to pick your color here", Color3.fromRGB(0,0,0), function(color)
-    print("Color has been changed!")
-end)
+-------------------------------------------------------------------------------------------------------------------------
 local Tab = Window:NewTab("Update Log")
-section:NewLabel("Update: 2/20/24 (V1.2)")
-sedtion:NewLabel("Added: Knife Autofarm")
-section:NewLabel("Added: Cash Pick Up")
-print("Thanks for Choosing Burrito's Farming GUI!")
+local b = Tab:NewSection("Update Logs")
+b:NewLabel("Update 2/20/24 (V1.2)")
+b:NewLabel("Added: Knife Autofarm Support")
+b:NewLabel("Added: A Working Boxing Script")
+-------------------------------------------------------------------------------------------------------------------------
+local Tab = Window:NewTab("Credits")
+local c = Tab:NewSection("Credits:")
+c:NewLabel("Made By: LokoBurrito")
+c:NewLabel("UI made by: xHeptc")
