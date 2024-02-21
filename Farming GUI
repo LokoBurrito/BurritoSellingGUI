@@ -35,8 +35,3 @@ local c = Tab:NewSection("Credits:")
 c:NewLabel("Made By: LokoBurrito")
 c:NewLabel("UI made by: xHeptc")
 -------------------------------------------------------------------------------------------------------------------------
-local Tab= Window:NewTab("Settings")
-local d = Tab:NewSection("Settings")
-d:NewKeybind("GUI Keybind", "Keybind to turn the GUI on and off", Enum.KeyCode.F, function()
- Library:ToggleUI()
-end)
