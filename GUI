@@ -11,7 +11,7 @@ Section:NewButton("Burrito's DHC Counter", "Counts the DHC on ground", function(
 end)
 local Tab = Window:NewTab("Update Log")
 local c = Tab:NewSection("Update Logs")
-c:NewLabel("Update 2/22/24 (V1.2)")
+c:NewLabel("Update 2/22/24 (V1.3)")
 c:NewLabel("Added: Theme Changer")
 c:NewLabel("Fixed: Delayed GUI Opening")
 c:NewLabel("Fixed: Bugs")
