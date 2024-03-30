@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Burrito's Farming GUI", "DarkTheme")
-local Tab = Window:NewTab("Farms")
+local Tab = Window:NewTab("Epic Pug Farms")
 local Section = Tab:NewSection("Autofarms")
 Section:NewButton("Autofarm (FISTS)", "Run after finishing Boxing Farm", function()
  _G.ToolMode = '1' -- '1' for Combat | '2' for Knife
@@ -16,6 +16,33 @@ Section:NewButton("Autofarm (KNIFE)", "Purchase a Knife before running", functio
  _G.ToggleKey = 'k' -- Toggle Key to hide Gui
  loadstring(game:HttpGet('https://raw.githubusercontent.com/EpicPug/dahood/main/AutoFarm.lua',true))()
 end)
+-------------------------------------------------------------------------------------------------------------------------
+local Tab = Window:NewTab("Epic Pug Farms")
+local g = Tab:NewSection("Iku Farms")
+Section:NewButton("Knife Farm", "no knife required, will buy for you", function()
+_G.AutofarmSettings = {
+    ["AttackMode"] = "3",
+    --// ^ 1 - Fast Punch | 2 - Super Punch | 3 - Knife (PROB THE FASTEST).
+    ["Credits"] = "iku autofarm - by @trans"
+}
+loadstring(game:HttpGet("https://github.com/applless/RandomScripts/raw/main/IkuAutofarm"))()
+ end)
+Section:NewButton("Super Punch Farm", "no knife required, will buy for you", function()
+_G.AutofarmSettings = {
+    ["AttackMode"] = "2",
+    --// ^ 1 - Fast Punch | 2 - Super Punch | 3 - Knife (PROB THE FASTEST).
+    ["Credits"] = "iku autofarm - by @trans"
+}
+loadstring(game:HttpGet("https://github.com/applless/RandomScripts/raw/main/IkuAutofarm"))()
+ end)
+Section:NewButton("Fast Punch Farm", "edge maxxing", function()
+_G.AutofarmSettings = {
+    ["AttackMode"] = "1",
+    --// ^ 1 - Fast Punch | 2 - Super Punch | 3 - Knife (PROB THE FASTEST).
+    ["Credits"] = "iku autofarm - by @trans"
+}
+loadstring(game:HttpGet("https://github.com/applless/RandomScripts/raw/main/IkuAutofarm"))()
+ end)
 -------------------------------------------------------------------------------------------------------------------------
 local Tab = Window:NewTab("Boxing Farm")
 local a = Tab:NewSection("Boxing Farm")
