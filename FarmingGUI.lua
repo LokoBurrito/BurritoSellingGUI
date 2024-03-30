@@ -16,8 +16,6 @@ Section:NewButton("Autofarm (KNIFE)", "Purchase a Knife before running", functio
  _G.ToggleKey = 'k' -- Toggle Key to hide Gui
  loadstring(game:HttpGet('https://raw.githubusercontent.com/EpicPug/dahood/main/AutoFarm.lua',true))()
 end)
--------------------------------------------------------------------------------------------------------------------------
-local Tab = Window:NewTab("Epic Pug Farms")
 local g = Tab:NewSection("Iku Farms")
 Section:NewButton("Knife Farm", "no knife required, will buy for you", function()
 _G.AutofarmSettings = {
